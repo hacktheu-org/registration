@@ -39,13 +39,13 @@ class Config implements IConfig.Main {
 		cookieMaxAge: 1000 * 60 * 60 * 24 * 30 * 6, // 6 months
 		cookieSecureOnly: false,
 		mongoURL: "mongodb://localhost/registration",
-		defaultTimezone: "America/New_York"
+		defaultTimezone: "America/Denver"
 	};
 	public admins = {
 		domains: [] as string[],
 		emails: [] as string[]
 	};
-	public eventName: string = "Untitled Event";
+	public eventName: string = "HackTheU 2019";
 	public storageEngine = {
 		"name": "disk",
 		"options": {
