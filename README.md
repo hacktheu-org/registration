@@ -1,11 +1,10 @@
-# HackGT Registration
+# HackTheU Registration
 
 **Powerful and extensible registration system for hackathons and other large events**
 
-[Check it out running in production](https://registration.hack.gt) for HackGT 4: New Heights!
+[Check it out running in production](https://registration.hacktheu.org) for HackTheU 2019!
 
-![HackGT 4: New Heights](http://i.imgur.com/ukj28V3.png)
-> Registration displaying the HackGT 4: New Heights participant application with the custom HackGT 4 dark theme.
+This is HackTheU's fork of HackGT's Registration Solution.
 
 ## Features
 
