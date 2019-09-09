@@ -7,13 +7,16 @@ RUN apk add git
 
 # Bundle app source
 WORKDIR /usr/src/registration
-COPY . /usr/src/registration
+COPY package.json /usr/src/registration/package.json
+COPY package-lock.json /usr/src/registration/package-lock.json
 RUN npm install
+
+COPY . /usr/src/registration
 RUN npm run build
 
 # Set Timezone to EST
 RUN apk add tzdata
-ENV TZ="/usr/share/zoneinfo/America/New_York"
+ENV TZ="/usr/share/zoneinfo/America/Denver"
 ENV NODE_ENV="production"
 
 # Deis wants EXPOSE and CMD
