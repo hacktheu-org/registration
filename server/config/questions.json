@@ -3,30 +3,73 @@
         "name": "Participant",
         "text": [
             {
+              "for": "date-of-birth",
+              "type": "p",
+              "content": "Glad to see you want to attend HackTheU! This application shouldn't take more than 10 minutes. If you need multiple sittings to complete it, complete what you can and submit it. You will be able to edit your application after submission until the application due date."
+            },
+            {
+                "for": "major",
+                "type": "p",
+                "content": "You must be a matriculated student at a university or have graduated from one in the last 12 months to attend this event."
+            },
+            {
+              "for": "first-hackathon",
+              "type": "p",
+              "content": "This is used for verification of information, analysis, and potential job opportunities from our sponsors. This resume doesn't have to be complete or up-to-date, just whatever is on hand!"
+            },
+            {
+              "for": "gender",
+              "type": "p",
+              "content": "This is in case of an emergency."
+            },
+            {
                 "for": "end",
                 "type": "p",
-                "content": "By submitting your application, you agree to allow HackGT to share your registration information with our sponsors."
+                "content": "Interested in hosting a workshop at the event? Fill out this form: https://forms.gle/EhsnkwpJQEBA95NA8"
+            },
+            {
+                "for": "end",
+                "type": "p",
+                "content": "Interested in hosting a interest group at the event? Fill out this form: https://forms.gle/1MUKyFASHcapgkrT6"
+            },
+            {
+                "for": "end",
+                "type": "p",
+                "content": "By submitting your application, you agree to allow HackTheU to share your registration information with our sponsors."
             }
         ],
         "questions": [
             {
-                "name": "name",
-                "type": "text",
-                "label": "Full name",
+                "name": "date-of-birth",
+                "type": "date",
+                "label": "Date of Birth",
+                "placeholder": "10/05/2019",
+                "required": true
+            },
+            {
+                "name": "phone",
+                "type": "tel",
+                "label": "Phone Number",
+                "placeholder": "801-123-4567",
                 "required": true
             },
             {
                 "name": "gender",
                 "label": "Gender",
                 "type": "radio",
-                "options": ["Male", "Female", "Prefer not to answer"],
+                "options": [
+                    "Male",
+                    "Female",
+                    "Nonbinary/Genderqueer",
+                    "Prefer not to answer"
+                ],
                 "hasOther": true,
                 "required": true
             },
             {
                 "name": "race",
-                "label": "Race / ethnicity",
-                "type": "checkbox",
+                "label": "Race / Ethnicity",
+                "type": "radio",
                 "options": [
                     "Non-Hispanic White",
                     "Black or African American",
@@ -38,55 +81,195 @@
                     "Hawaiian or Pacific Islander"
                 ],
                 "hasOther": true,
-                "required": false
+                "required": true
+            },
+            {
+                "name": "university",
+                "label": "Which university do you attend?",
+                "type": "select",
+                "options": [
+                    "University of Utah",
+                    "Salt Lake Community College",
+                    "Westminster College",
+                    "Weber State University",
+                    "Brigham Young University",
+                    "Utah Valley University"
+                ],
+                "hasOther": true,
+                "required": true
+            },
+            {
+                "name": "major",
+                "label": "What is your major?",
+                "type": "select",
+                "options": [
+                    "Computer Science",
+                    "Computer Engineering",
+                    "Information Systems",
+                    "Electrical Engineering",
+                    "Game Design",
+                    "Illustration",
+                    "Mathematics"
+                ],
+                "hasOther": true,
+                "required": true
+            },
+            {
+              "name": "grad-year",
+              "label": "When will you be graduating?",
+              "type": "select",
+              "options": [
+                "Spring 2019",
+                "Summer 2019",
+                "Fall 2019",
+                "Spring 2020",
+                "Summer 2020",
+                "Fall 2020",
+                "Spring 2021",
+                "Summer 2021",
+                "Fall 2021",
+                "Spring 2022",
+                "Summer 2022",
+                "Fall 2022",
+                "Spring 2023",
+                "Summer 2023",
+                "Fall 2023",
+                "Spring 2024",
+                "Summer 2024",
+                "Fall 2024",
+                "Spring 2025",
+                "Summer 2025",
+                "Fall 2025"
+              ],
+              "hasOther": true,
+              "required": true
             },
             {
                 "name": "resume",
-                "label": "Please upload your resume or a skill sheet",
+                "label": "Please upload your most recent resume.",
                 "type": "file",
                 "required": true
             },
             {
                 "name": "first-hackathon",
-                "label": "Will HackGT be your first hackathon?",
+                "label": "Will HackTheU be your first hackathon?",
                 "type": "radio",
                 "options": [
                     "Yes",
-                    "No, I've attended HackGT before",
+                    "No, I've attended HackTheU before",
                     "No, I've attended other hackathons before"
                 ],
                 "required": true
             },
             {
-                "name": "hope-to-learn",
-                "label": "What do you hope to learn at HackGT?",
+                "name": "tshirt-size",
+                "label": "What is your unisex t-shirt size?",
+                "type": "radio",
+                "options": [
+                    "XS",
+                    "S",
+                    "M",
+                    "L",
+                    "XL",
+                    "XXL",
+                    "XXXL"
+                ],
+                "required": true
+            },
+            {
+                "name": "dietary-restrictions",
+                "label": "Do you have any dietary restrictions?",
+                "type": "checkbox",
+                "options": [
+                    "None",
+                    "Vegetarian",
+                    "Vegan",
+                    "Halal",
+                    "Kosher",
+                    "No Nuts",
+                    "No Gluten",
+                    "No Dairy"
+                ],
+                "hasOther": true
+            },
+            {
+                "name": "hope-to-get",
+                "label": "What do you hope to get out of HackTheU?",
                 "type": "textarea",
+                "required": true,
+                "maxWordCount": 500
+            },
+            {
+                "name": "hope-to-see",
+                "label": "Anything you'd like to see at HackTheU?",
+                "type": "textarea",
+                "required": false
+            },
+            {
+                "name": "required-items",
+                "label": "Please confirm the following:",
+                "type": "checkbox",
+                "options": [
+                    "I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
+                    "I agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md)",
+                    "I agree to the terms of the [MLH Privacy Policy](https://mlh.io/privacy)"
+                ],
+                "hasOther": false,
                 "required": true
             }
         ]
     },
     {
         "name": "Mentor",
-        "text": [],
+        "text": [
+            {
+                "for": "date-of-birth",
+                "type": "p",
+                "content": "Mentors will float around the hacker space answering questions our participants may have with their projects, such as with debugging or how to use some API. We will have a help queue software to quickly and easily match mentors with participants."
+            },
+            {
+                "for": "end",
+                "type": "p",
+                "content": "Interested in hosting a workshop at the event? Fill out this form: https://forms.gle/EhsnkwpJQEBA95NA8"
+            },
+            {
+                "for": "end",
+                "type": "p",
+                "content": "Interested in hosting a interest group at the event? Fill out this form: https://forms.gle/1MUKyFASHcapgkrT6"
+            }
+        ],
         "questions": [
             {
-                "name": "name",
-                "type": "text",
-                "label": "Full name",
+                "name": "date-of-birth",
+                "type": "date",
+                "label": "Date of Birth",
+                "placeholder": "10/05/2019",
+                "required": true
+            },
+            {
+                "name": "phone",
+                "type": "tel",
+                "label": "Phone Number",
+                "placeholder": "801-123-4567",
                 "required": true
             },
             {
                 "name": "gender",
                 "label": "Gender",
                 "type": "radio",
-                "options": ["Male", "Female", "Prefer not to answer"],
+                "options": [
+                    "Male",
+                    "Female",
+                    "Nonbinary/Genderqueer",
+                    "Prefer not to answer"
+                ],
                 "hasOther": true,
                 "required": true
             },
             {
                 "name": "race",
-                "label": "Race / ethnicity",
-                "type": "checkbox",
+                "label": "Race / Ethnicity",
+                "type": "radio",
                 "options": [
                     "Non-Hispanic White",
                     "Black or African American",
@@ -98,33 +281,23 @@
                     "Hawaiian or Pacific Islander"
                 ],
                 "hasOther": true,
-                "required": false
-            },
-            {
-                "name": "school",
-                "label": "School?",
-                "type": "select",
-                "options": [
-                    "Georgia Tech",
-                    "North Avenue Trade School",
-                    "Georgia Institute of Technology",
-                    "Georgia Tech University"
-                ],
-                "hasOther": true,
                 "required": true
             },
             {
-                "name": "school-2",
-                "label": "School (not required)?",
+                "name": "university",
+                "label": "Which university are you currenting attending/did you graduated from?",
                 "type": "select",
                 "options": [
-                    "Georgia Tech",
-                    "North Avenue Trade School",
-                    "Georgia Institute of Technology",
-                    "Georgia Tech University"
+                    "University of Utah",
+                    "Salt Lake Community College",
+                    "Westminster College",
+                    "Weber State University",
+                    "Brigham Young University",
+                    "Utah Valley University",
+                    "None"
                 ],
                 "hasOther": true,
-                "required": false
+                "required": true
             },
             {
                 "name": "is-student",
@@ -155,37 +328,9 @@
                 "required": true
             },
             {
-                "name": "github",
-                "label": "GitHub profile",
-                "type": "url",
-                "required": false
-            },
-            {
-                "name": "website",
-                "label": "Personal website",
-                "type": "url",
-                "required": false
-            },
-            {
                 "name": "other-links",
-                "label": "Other relevant links (e.g. LinkedIn)",
-                "type": "url",
-                "required": false
-            },
-            {
-                "name": "can-hold-workshop",
-                "label": "Would you be willing to hold a workshop?",
-                "type": "radio",
-                "options": [
-                    "Yes",
-                    "No"
-                ],
-                "required": true
-            },
-            {
-                "name": "workshop-if-willing",
-                "label": "If so, about what?",
-                "type": "text",
+                "label": "Relevant Links (e.g. GitHub, LinkedIn, Personal Website)",
+                "type": "textarea",
                 "required": false
             },
             {
@@ -196,22 +341,22 @@
             },
             {
                 "name": "why-mentor",
-                "label": "Why do you want to be a mentor at HackGT?",
+                "label": "Why do you want to be a mentor at HackTheU?",
                 "type": "textarea",
                 "required": true
             },
             {
                 "name": "tshirt-size",
-                "label": "What is your T-shirt size?",
+                "label": "What is your unisex t-shirt size?",
                 "type": "radio",
                 "options": [
-                    "Extra small",
-                    "Small",
-                    "Medium",
-                    "Large",
-                    "Extra large",
-                    "2XL",
-                    "3XL"
+                    "XS",
+                    "S",
+                    "M",
+                    "L",
+                    "XL",
+                    "XXL",
+                    "XXXL"
                 ],
                 "required": true
             },
@@ -220,43 +365,187 @@
                 "label": "Do you have any dietary restrictions?",
                 "type": "checkbox",
                 "options": [
+                    "None",
                     "Vegetarian",
                     "Vegan",
-                    "Gluten-free"
+                    "Halal",
+                    "Kosher",
+                    "No Nuts",
+                    "No Gluten",
+                    "No Dairy"
                 ],
-                "hasOther": true,
-                "required": false
+                "hasOther": true
+            },
+            {
+                "name": "mentor-times",
+                "label": "What times between October 5th @ 12:30 PM to October 6th @ 12:00 PM could you tentatively mentor for?",
+                "type": "textarea"
             },
             {
                 "name": "other",
                 "label": "Anything else you want us to know?",
                 "type": "textarea",
                 "required": false
-            }
-        ]
-    },
-    {
-        "name": "Waitlist",
-        "text": [
+            },
             {
-                "for": "confirmation",
-                "type": "h5",
-                "content": "We will notify you by 9 PM on the day the event starts"
-            }
-        ],
-        "questions": [
-            {
-                "name": "phone",
-                "label": "Please give your phone number to confirm spot on the waitlist.",
-                "type": "text",
+                "name": "required-items",
+                "label": "Please confirm the following:",
+                "type": "checkbox",
+                "options": [
+                    "I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
+                    "I agree to the terms of the [MLH Privacy Policy](https://mlh.io/privacy)"
+                ],
+                "hasOther": false,
                 "required": true
             }
         ]
     },
     {
-        "name": "Rejected",
-        "text": [],
-        "questions": []
+        "name": "Volunteer",
+        "text": [
+            {
+                "for": "date-of-birth",
+                "type": "p",
+                "content": "Volunteers help with things like manning the registration table, helping setup rooms, directing participants and student groups, and helping ensure we have enough manpower to make the event run smoothly."
+            }
+        ],
+        "questions": [
+            {
+                "name": "date-of-birth",
+                "type": "date",
+                "label": "Date of Birth",
+                "placeholder": "10/05/2019",
+                "required": true
+            },
+            {
+                "name": "phone",
+                "type": "tel",
+                "label": "Phone Number",
+                "placeholder": "801-123-4567",
+                "required": true
+            },
+            {
+                "name": "gender",
+                "label": "Gender",
+                "type": "radio",
+                "options": [
+                    "Male",
+                    "Female",
+                    "Nonbinary/Genderqueer",
+                    "Prefer not to answer"
+                ],
+                "hasOther": true,
+                "required": true
+            },
+            {
+                "name": "race",
+                "label": "Race / Ethnicity",
+                "type": "radio",
+                "options": [
+                    "Non-Hispanic White",
+                    "Black or African American",
+                    "Latino, Latina, or Hispanic American",
+                    "South Asian or Indian American",
+                    "East Asian or Asian American",
+                    "Middle Eastern or Arab American",
+                    "Native American or Alaskan Native",
+                    "Hawaiian or Pacific Islander"
+                ],
+                "hasOther": true,
+                "required": true
+            },
+            {
+                "name": "university",
+                "label": "Which university are you currenting attending/did you graduated from?",
+                "type": "select",
+                "options": [
+                    "University of Utah",
+                    "Salt Lake Community College",
+                    "Westminster College",
+                    "Weber State University",
+                    "Brigham Young University",
+                    "Utah Valley University",
+                    "None"
+                ],
+                "hasOther": true,
+                "required": true
+            },
+            {
+                "name": "is-student",
+                "label": "Are you currently a student?",
+                "type": "radio",
+                "options": [
+                    "Yes",
+                    "No"
+                ],
+                "required": true
+            },
+            {
+                "name": "job-if-not-student",
+                "label": "If not, what do you do?",
+                "type": "text",
+                "required": false
+            },
+            {
+                "name": "why-volunteer",
+                "label": "Is there anything specific you'd like to get out of volunteering for HackTheU?",
+                "type": "textarea",
+                "required": true
+            },
+            {
+                "name": "tshirt-size",
+                "label": "What is your unisex t-shirt size?",
+                "type": "radio",
+                "options": [
+                    "XS",
+                    "S",
+                    "M",
+                    "L",
+                    "XL",
+                    "XXL",
+                    "XXXL"
+                ],
+                "required": true
+            },
+            {
+                "name": "dietary-restrictions",
+                "label": "Do you have any dietary restrictions?",
+                "type": "checkbox",
+                "options": [
+                    "None",
+                    "Vegetarian",
+                    "Vegan",
+                    "Halal",
+                    "Kosher",
+                    "No Nuts",
+                    "No Gluten",
+                    "No Dairy"
+                ],
+                "hasOther": true
+            },
+            {
+                "name": "volunteer-times",
+                "label": "What times between October 5th @ 9:00 AM to October 6th @ 5:00 PM could you tentatively volunteer for?",
+                "type": "textarea"
+            },
+            {
+                "name": "other",
+                "label": "Anything else you want us to know?",
+                "type": "textarea",
+                "required": false
+            },
+            {
+                "name": "required-items",
+                "label": "Please confirm the following:",
+                "type": "checkbox",
+                "options": [
+                    "I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
+                    "I agree to the terms of the [MLH Privacy Policy](https://mlh.io/privacy)"
+                ],
+                "hasOther": false,
+                "required": true
+            }
+        ]
     },
     {
         "name": "General Confirmation",
@@ -275,7 +564,7 @@
         "questions": [
             {
                 "name": "confirmation",
-                "label": "Will you be attending HackGT this year on October 13th to 15th?",
+                "label": "Will you be attending HackTheU this year on October 13th to 15th?",
                 "type": "radio",
                 "options": [
                     "Yes, I'll be there!",
@@ -289,10 +578,7 @@
                 "label": "Please confirm the following:",
                 "type": "checkbox",
                 "options": [
-                    "I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
-                    "I agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md)",
-                    "I agree to the terms of the [MLH Privacy Policy](https://mlh.io/privacy)",
-                    "I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/0B2pRUVzz8hWeUE9oaGxXNUxRTjg/view?usp=sharing)"
+                    "I agree to the [HackTheU Liability Waiver](https://drive.google.com/file/d/0B2pRUVzz8hWeUE9oaGxXNUxRTjg/view?usp=sharing)"
                 ],
                 "hasOther": false,
                 "required": true
@@ -302,10 +588,40 @@
                 "label": "Please confirm the following (optional):",
                 "type": "checkbox",
                 "options": [
-                    "I agree to the [HackGT Photo Release](https://drive.google.com/file/d/0B2pRUVzz8hWebXQ1WllYSmI5TGc/view?usp=sharing)"
+                    "I agree to the [HackTheU Photo Release](https://drive.google.com/file/d/0B2pRUVzz8hWebXQ1WllYSmI5TGc/view?usp=sharing)"
                 ],
                 "hasOther": false,
                 "required": false
+            },
+            {
+                "name": "hazard-acknowledgement",
+                "label": "Do you acknowledge that the use of any hardware or tools that may pose a fire, electrical, or physical risk to you and/or others is prohibited at this event?\nThis includes but is not limited to soldering irons, power tools, and high-capacity/unprotected batteries. Please email info@hacktheu.com for any clarifications.",
+                "type": "checkbox",
+                "options": [
+                    "Yes"
+                ],
+                "required": true
+            },
+            {
+                "name": "team",
+                "type": "radio",
+                "label": "Do you have a team?\nYou may participate in a team of 1 to 4 people. You are not required to register with a team, and you may form a team with any other participant after registering even if you mark no.\nPlease register your team name and add your teammates in the Team section of this website.",
+                "options": [
+                    "Yes",
+                    "No"
+                ],
+                "required": true
+            },
+            {
+                "name": "hardware",
+                "label": "Will your project involve hardware?\nHardware projects are not required for this event!\nWe will have a booth where we will lend Arduinos; a breadboard; simple components like resistors, LEDs, transistors, capacitors, and buttons; and credits to AWS instances.\nYou are allowed to bring any of your own hardware to this event, like old alarm clocks, Raspberry Pis, motors, etc.",
+                "type": "radio",
+                "options": [
+                    "Yes",
+                    "No",
+                    "Not Sure"
+                ],
+                "required": true
             }
         ]
     }
