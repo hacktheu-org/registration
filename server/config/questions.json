@@ -553,7 +553,7 @@
             {
                 "for": "confirmation",
                 "type": "h5",
-                "content": "Note: opening ceremonies will begin at approximately 12 PM on Saturday, Oct 5 and closing ceremonies will end at approximately 4 PM on Sunday, Oct 6th. Registration begins at 10 AM on Saturday, Oct 5."
+                "content": "Note: opening ceremonies will begin at approximately 11:30 AM on Saturday, Oct 5 and closing ceremonies will end at approximately 4 PM on Sunday, Oct 6th. Registration begins at 10 AM on Saturday, Oct 5."
             },
             {
                 "for": "required-items",
@@ -605,6 +605,111 @@
                     "No",
                     "Not Sure"
                 ],
+                "required": true
+            },
+            {
+                "name": "phone",
+                "type": "tel",
+                "label": "Would you like to receive text notifications during the event? If so, please provide a phone number.",
+                "placeholder": "801-123-4567",
+                "required": false
+            }
+        ]
+    },
+    {
+        "name": "Volunteer Confirmation",
+        "text": [
+            {
+                "for": "confirmation",
+                "type": "h5",
+                "content": "Note: opening ceremonies will begin at approximately 11:30 AM on Saturday, Oct 5 and closing ceremonies will end at approximately 4 PM on Sunday, Oct 6th. Registration begins at 10 AM on Saturday, Oct 5."
+            },
+            {
+                "for": "required-items",
+                "type": "h5",
+                "content": "Please confirm some things"
+            }
+        ],
+        "questions": [
+            {
+                "name": "confirmation",
+                "label": "Will you still be volunteering at HackTheU this year on October 5th to 6th?",
+                "type": "radio",
+                "options": [
+                    "Yes, I'll be there!",
+                    "Sorry, I can't make it"
+                ],
+                "hasOther": false,
+                "required": true
+            },
+            {
+                "name": "required-items",
+                "label": "Please confirm the following:",
+                "type": "checkbox",
+                "options": [
+                    "I agree to the [HackTheU Liability Waiver](https://hacktheu.org/hacktheu-general-liability-form/)",
+                    "I agree to the [HackTheU Photo Release](https://hacktheu.org/photo-release/)",
+                    "I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
+                    "I agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md)",
+                    "I agree to the terms of the [MLH Privacy Policy](https://mlh.io/privacy)"
+                ],
+                "hasOther": false,
+                "required": true
+            },
+            {
+                "name": "phone",
+                "type": "tel",
+                "label": "What is a good phone number we can reach you at?",
+                "placeholder": "801-123-4567",
+                "required": true
+            }
+        ]
+    },
+    {
+        "name": "Mentor Confirmation",
+        "text": [
+            {
+                "for": "confirmation",
+                "type": "h5",
+                "content": "Note: opening ceremonies will begin at approximately 11:30 AM on Saturday, Oct 5 and closing ceremonies will end at approximately 4 PM on Sunday, Oct 6th. Registration begins at 10 AM on Saturday, Oct 5."
+            },
+            {
+                "for": "required-items",
+                "type": "h5",
+                "content": "Please confirm some things"
+            }
+        ],
+        "questions": [
+            {
+                "name": "confirmation",
+                "label": "Will you be mentoring at HackTheU this year on October 5th to 6th?",
+                "type": "radio",
+                "options": [
+                    "Yes, I'll be there!",
+                    "Sorry, I can't make it"
+                ],
+                "hasOther": false,
+                "required": true
+            },
+            {
+                "name": "required-items",
+                "label": "Please confirm the following:",
+                "type": "checkbox",
+                "options": [
+                    "I agree to the [HackTheU Liability Waiver](https://hacktheu.org/hacktheu-general-liability-form/)",
+                    "I agree to the [HackTheU Photo Release](https://hacktheu.org/photo-release/)",
+                    "I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
+                    "I agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md)",
+                    "I agree to the terms of the [MLH Privacy Policy](https://mlh.io/privacy)"
+                ],
+                "hasOther": false,
+                "required": true
+            },
+            {
+                "name": "phone",
+                "type": "tel",
+                "label": "What is a good phone number we can reach you at?",
+                "placeholder": "801-123-4567",
                 "required": true
             }
         ]
