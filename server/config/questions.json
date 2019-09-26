@@ -553,7 +553,7 @@
             {
                 "for": "confirmation",
                 "type": "h5",
-                "content": "Note that opening ceremonies will begin at approximately 7pm on Friday and closing ceremonies will end at approximately 2pm on Sunday"
+                "content": "Note: opening ceremonies will begin at approximately 12 PM on Saturday, Oct 5 and closing ceremonies will end at approximately 4 PM on Sunday, Oct 6th. Registration begins at 10 AM on Saturday, Oct 5."
             },
             {
                 "for": "required-items",
@@ -564,7 +564,7 @@
         "questions": [
             {
                 "name": "confirmation",
-                "label": "Will you be attending HackTheU this year on October 13th to 15th?",
+                "label": "Will you be attending HackTheU this year on October 5th to 6th?",
                 "type": "radio",
                 "options": [
                     "Yes, I'll be there!",
@@ -578,20 +578,14 @@
                 "label": "Please confirm the following:",
                 "type": "checkbox",
                 "options": [
-                    "I agree to the [HackTheU Liability Waiver](https://drive.google.com/file/d/0B2pRUVzz8hWeUE9oaGxXNUxRTjg/view?usp=sharing)"
+                    "I agree to the [HackTheU Liability Waiver](https://hacktheu.org/hacktheu-general-liability-form/)",
+                    "I agree to the [HackTheU Photo Release](https://hacktheu.org/photo-release/)",
+                    "I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
+                    "I agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md)",
+                    "I agree to the terms of the [MLH Privacy Policy](https://mlh.io/privacy)"
                 ],
                 "hasOther": false,
                 "required": true
-            },
-            {
-                "name": "optional-items",
-                "label": "Please confirm the following (optional):",
-                "type": "checkbox",
-                "options": [
-                    "I agree to the [HackTheU Photo Release](https://drive.google.com/file/d/0B2pRUVzz8hWebXQ1WllYSmI5TGc/view?usp=sharing)"
-                ],
-                "hasOther": false,
-                "required": false
             },
             {
                 "name": "hazard-acknowledgement",
@@ -603,18 +597,8 @@
                 "required": true
             },
             {
-                "name": "team",
-                "type": "radio",
-                "label": "Do you have a team?\nYou may participate in a team of 1 to 4 people. You are not required to register with a team, and you may form a team with any other participant after registering even if you mark no.\nPlease register your team name and add your teammates in the Team section of this website.",
-                "options": [
-                    "Yes",
-                    "No"
-                ],
-                "required": true
-            },
-            {
                 "name": "hardware",
-                "label": "Will your project involve hardware?\nHardware projects are not required for this event!\nWe will have a booth where we will lend Arduinos; a breadboard; simple components like resistors, LEDs, transistors, capacitors, and buttons; and credits to AWS instances.\nYou are allowed to bring any of your own hardware to this event, like old alarm clocks, Raspberry Pis, motors, etc.",
+                "label": "Will your project involve hardware?\nHardware projects are not required for this event!\nWe will have a booth where we will lend Arduinos; a breadboard; simple components like resistors, LEDs, transistors, capacitors, and buttons.\nYou are allowed to bring any of your own hardware to this event, like old alarm clocks, Raspberry Pis, motors, etc.",
                 "type": "radio",
                 "options": [
                     "Yes",
